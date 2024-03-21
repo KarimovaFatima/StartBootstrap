@@ -1,0 +1,254 @@
+#intro {
+  background-image: url(../../images/bg-masthead.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: -58px;
+  text-align: center;
+  position: relative;
+
+  .intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 362px;
+
+    .intro-title {
+      z-index: 1;
+      h1 {
+        color: $secondary-color;
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    }
+    .intro-description {
+      z-index: 1;
+      p {
+        color: $secondary-color;
+        opacity: 0.7;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    }
+    .dvider {
+      @include dividerStyles();
+      //   align-self: center;
+    }
+    .intro-button {
+      margin-top: 40px;
+      z-index: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $third-color;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+#what-you-need {
+  background-color: $primary-color;
+  text-align: center;
+  padding: 80px 0;
+
+  .what-you-need-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .what-you-need-title {
+    margin-bottom: 20px;
+    h4 {
+      color: $secondary-color;
+      font-size: 35px;
+      font-weight: 400;
+    }
+  }
+
+  .divider {
+    @include dividerStyles($secondary-color);
+  }
+
+  .what-you-need-description {
+    margin-top: 20px;
+    padding: 0 380px;
+    p {
+      color: $secondary-color;
+      opacity: 0.7;
+    }
+  }
+
+  .what-you-need-button {
+    margin-top: 50px;
+  }
+}
+
+#services {
+  padding: 80px 0;
+
+  .services-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .services-title {
+      margin-bottom: 35px;
+      h4 {
+        font-size: 35px;
+        font-weight: 400;
+      }
+    }
+
+    .divider {
+      @include dividerStyles();
+    }
+
+    .services-content {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .service-card {
+        i {
+          color: $primary-color;
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+
+        h5 {
+          font-size: 24px;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+#portfolio{
+  .portfolio-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    .portfolio-image{
+      img{
+        width: 506px;
+        height: 272px;
+        //  &:hover{
+        //   background-color: $primary-color;
+        //  }
+      } 
+    }
+  }
+}
+
+#download-site{
+   margin-bottom: 150px;
+   .download-site-bg{
+    background-color: $dark-bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+     h4{
+      color: $secondary-color;
+      font-size: 35px;
+      font-weight: 400;
+     }
+     .download-site-btn{
+      text-align: center;
+      padding: 60px 0;
+       a{
+      @include buttonStyles($secondary-color, $third-color);
+       &:hover{
+        background-color: $btn-hover-color;
+        transition: 0.3s;
+       }
+      }
+     }
+    
+   }
+
+}
+
+#contact-page{
+  .contact-page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     h4{
+      color: $third-color;
+      font-size: 35px;
+      font-weight: 400;
+      margin-bottom: 20px
+     }
+     .divider{
+      @include dividerStyles($primary-color);
+     }
+     .contact-page-text{
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      p{
+        color: $text-color;
+        
+      }
+     }
+     .contact-input{
+      input{
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 20px 15px;
+        width: 580px;
+        margin-bottom: 15px;
+         &::placeholder{
+          color: $third-color;
+          font-size: 16px;
+          font-weight: 500;
+         }
+      }
+      #message-input{
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        padding: 20px 15px;
+        width: 580px;
+        height: 150px;
+        margin-bottom: 15px;
+        &::placeholder{
+          color: $third-color;
+          font-size: 16px;
+          font-weight: 500;
+      }
+     }
+  }
+  .contact-btn{
+    #submit-btn{
+      @include buttonStyles( $btn-bg-color, $secondary-color);
+      width: 580px;
+    }
+    margin-bottom: 45px;
+  }
+   .contact{
+    text-align: center;
+    i{
+      font-size: 40px;
+      color: $text-color;
+      margin-bottom: 15px;
+    }
+    .phone-num{
+      margin-bottom: 70px;
+    }
+   }
+}
+}
